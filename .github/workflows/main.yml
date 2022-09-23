@@ -10,16 +10,16 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v1
 
-      - name: "web-ext build"
+      - name: web-ext Action for Firefox Add-ons
         id: web-ext-build
-        uses: kewisch/action-web-ext@v1
+        uses: kewisch/action-web-ext@v1.0
         with:
           cmd: build
           source: src
 
-      - name: "web-ext sign"
+      - name: web-ext Action for Firefox Add-ons
         id: web-ext-sign
-        uses: kewisch/action-web-ext@v1
+        uses: kewisch/action-web-ext@v1.0
         with:
           cmd: sign
           source: ${{ steps.web-ext-build.outputs.target }}
