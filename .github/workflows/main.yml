@@ -24,13 +24,13 @@ jobs:
           cmd: sign
           source: ${{ steps.web-ext-build.outputs.target }}
           channel: unlisted
-          apiKey: ${{ user:17566828:728 }}
-          apiSecret: ${{ 6a579742b940615525707589309a685cf1a838af6df52d2b7cadbc650b027228 }}
+          apiKey: ${{  }}
+          apiSecret: ${{  }}
           timeout: 900000
 
       - name: "Create Release"
         uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ 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 }}
+          GITHUB_TOKEN: ${{ }}
         with:
           files: ${{ steps.web-ext-sign.outputs.target }}
